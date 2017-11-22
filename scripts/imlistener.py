@@ -9,11 +9,8 @@ import time
 from std_msgs.msg import String
 from std_msgs.msg import Int32
 
-p = '0'
-ultra = 16
-pub = rospy.Publisher('datoim', Int32, queue_size=10)
+
 def callback(data):
-    global pub
     br = CvBridge()
     rospy.loginfo('receiving image')
     dx = br.imgmsg_to_cv2(data)

@@ -6,7 +6,7 @@ from cv_bridge import CvBridge
 import cv2
 import time
 def talker():
-    pub = rospy.Publisher('imager', Image, queue_size=10)
+    pub = rospy.Publisher('imageri', Image, queue_size=10)
     rospy.init_node('talkerim',anonymous=True)
     rate = rospy.Rate(5) #2hz
     capture = cv2.VideoCapture(0)
